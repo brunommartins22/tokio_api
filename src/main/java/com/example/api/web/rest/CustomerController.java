@@ -14,7 +14,7 @@ import com.example.api.domain.Customer;
 import com.example.api.service.CustomerService;
 
 @RestController
-@RequestMapping("/customers")
+@RequestMapping("/api/customers")
 public class CustomerController {
 
 	private CustomerService service;
@@ -34,5 +34,7 @@ public class CustomerController {
 		return service.findById(id)
 				.orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Customer not found"));
 	}
+        
+        
 
 }
